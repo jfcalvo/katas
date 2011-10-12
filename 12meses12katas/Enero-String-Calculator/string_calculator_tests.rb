@@ -52,5 +52,4 @@ class TestStringCalculatorAdd < Test::Unit::TestCase
     exception = assert_raises(RuntimeError) { @string_calculator.add("-2, -3") }
     assert_equal "negatives not allowed: -2, -3", exception.message
   end
-
 end

@@ -22,7 +22,6 @@ class InputParser
     end
     return input.split(/\n|,/).map(&:to_i)
   end
-  
 end
 
 class NumbersValidator
@@ -31,5 +30,4 @@ class NumbersValidator
     negative_numbers = numbers.select { |number| number < 0 }
     raise "negatives not allowed: #{negative_numbers.join ", "}" unless negative_numbers.empty?
   end
-
 end
