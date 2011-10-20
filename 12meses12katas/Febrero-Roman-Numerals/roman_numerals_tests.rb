@@ -11,7 +11,7 @@ class TestRomanNumerals < Test::Unit::TestCase
 # 11 --> XI
   
   def setup
-    @roman_numerals = RomanNumerals.new
+    @roman_numerals = RomanNumerals.new RomanBaseNumbers.new
   end
 
   def test_1_we_get_I
