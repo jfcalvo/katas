@@ -4,7 +4,6 @@ require_relative 'roman_numerals.rb'
 
 class TestRomanNumerals < Test::Unit::TestCase
 
-# 6 --> VI
 # 7 --> VII
 # 8 --> VIII
 # 9 --> IX
@@ -56,6 +55,14 @@ class TestRomanNumerals < Test::Unit::TestCase
   
   def test_6_we_get_VI
     assert_equal "VI", @roman_numerals.to_roman(6)
+  end
+  
+  def test_8_we_get_VIII
+    assert_equal "VIII", @roman_numerals.to_roman(8)
+  end
+  
+  def test_41_we_get_XLI
+    assert_equal "XLI", @roman_numerals.to_roman(41)
   end
   
 end

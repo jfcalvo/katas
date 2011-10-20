@@ -25,8 +25,8 @@ class RomanNumerals
   def decompose_with_range(number, range)
     inferior_range_distance = number - range.begin
     superior_range_distance = range.end - number
-    if inferior_range_distance <= superior_range_distance
-      return @base_numbers.get_base(range.begin) + self.to_roman(inferior_range_distance)
+    if number < range.end - 1
+      return @base_numbers.get_base(range.begin) + self.to_roman(inferior_range_distance)  
     end
     return self.to_roman(superior_range_distance) + @base_numbers.get_base(range.end)
   end
